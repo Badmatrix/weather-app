@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Mooli&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>weather app</title>
+</head>
+<body class="bg-gray-50">
+    <div class="wrapper mx-auto my-3 tracking-wide border w-4/6 sm:w-3/6 ">
+        <h1 class="text-gray-500 text-center capitalize sm:text-2xl font-semibold my-3 text-sm">matrix-weather</h1>
+        <form action="" class="location text-center text-gray-500">
+            <div class="form-input">
+                <label for="city" class="my-2 capitalize text-xs">enter location for weather info</label>
+                <input type="text" name="city" class="py-2 px-3 block w-2/3 mx-auto my-3 border">
+            </div>
+            <div class="utc text-xs sm:text-sm block sm:flex justify-between w-3/4 mx-auto text-red-600 my-3">
+            
+            </div>
+            <div class="card rounded-lg shadow-lg border w-5/6 md:w-3/5 mx-auto pb-3 hidden">
+                
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/400x300" alt="" class="time rounded-t-lg">
+                </div>
+                <div class="text-center icon">
+                    <!-- icon -->
+                    <img src="" alt="">
+                </div>
+                <div class="text-center capitalize text-center details text-sm">
+                    <div class="utc">
+                        <h4></h4>
+                    </div>
+                     <h1 class="my-3 font-bold text-gray-700">city name</h1>
+                     <div class="my3">weather condition</div>
+                     <div class="text-3xl my-4">
+                        <span>temp</span>
+                        <span>&deg;c</span>
+                     </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
