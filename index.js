@@ -1,4 +1,4 @@
-const key = 'zeefscgJz6Dh1cAYu9OhUGdJzyC9vJng';
+const key = '6mcT10kY92ZoSPJkUGluGFcygPfaizdX';
 const cityForm=document.querySelector('form')
 const details = document.querySelector('.details')
 const card = document.querySelector('.card')
