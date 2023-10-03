@@ -61,16 +61,15 @@ const updateUI = (data) => {
     if (card.classList.contains('hidden')) {
         card.classList.remove('hidden')
     }
-    let timeSrc=``
-    if (weather.IsDayTime) {
-        timeSrc='/img/day.svg'
-    } else {
-        timeSrc='/img/night.svg'
-    }
+    // tenary operation
+    let timeSrc = weather.IsDayTime ? '/img/day.svg' : '/img/night.svg';
     time.setAttribute('src', timeSrc)
     
 }
-
+const errorUI =async (err) => {
+    timeStamp.innerHTML =
+    `<h1 class="text-center">${err.message} data check connection</h1> `
+}
 
 cityForm.addEventListener('submit',e => {
     e.preventDefault()
@@ -78,5 +77,12 @@ cityForm.addEventListener('submit',e => {
     cityForm.reset()
     updateCity(city)
         .then(data => updateUI(data))
-        .catch(err => err.message)
+        .catch(err => errorUI(err))
+        localStorage.setItem('city',city)
 })
+if (localStorage.getItem('city')) {
+    updateCity(localStorage.getItem('city'))
+    .then(data => updateUI(data))
+    .catch(err => errorUI(err))
+}
+
