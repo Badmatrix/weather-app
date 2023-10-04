@@ -16,7 +16,7 @@ const getCity = async (city) => {
 }
 //function to get weather details of a certain location using locationKey=id
 const getWeather = async(id) => {
-    const base = `http://dataservice.accuweather.com/currentconditions/v1/${id}`
+    const base = `https://dataservice.accuweather.com/currentconditions/v1/${id}`
     const query = `?apikey=${key}`
     const response = await fetch(base + query)
     const data = await response.json()
@@ -85,3 +85,4 @@ cityForm.addEventListener('submit', e => {
     .then(data => updateUI(data))
     .catch(err => errorUI(err))
 }
+
