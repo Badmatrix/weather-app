@@ -64,7 +64,7 @@ class App {
     this._renderSpiner()
     const cityName = this.#form.city.value.toLowerCase()
     try {
-      const data=await this._getJson(`http://api.weatherapi.com/v1/current.json?key=${this.#weatherapiKey}&q=${cityName}`)
+      const data=await this._getJson(`https://api.weatherapi.com/v1/current.json?key=${this.#weatherapiKey}&q=${cityName}`)
       if(!data) throw Error (`${cityName} does not exist check spelling`)
       const { current, location } = data
       // console.log(data)
