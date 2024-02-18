@@ -1,0 +1,27 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "this project was written using javascript styled with tailwindcss \r the Accuweather api was also used\r it requires user to input the location of their desired city and they will be provided with the location current weather status and current timestamps in utc",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Badmatrix/weather-app.git"
+  },
+  "keywords": [],
+  "author": "Matrix_Xcodes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Badmatrix/weather-app/issues"
+  },
+  "homepage": "https://github.com/Badmatrix/weather-app#readme",
+  "devDependencies": {
+    "@parcel/resolver-glob": "^2.11.0",
+    "parcel": "^2.11.0",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.4.34",
+    "tailwindcss": "^3.4.1"
+  }
+}
