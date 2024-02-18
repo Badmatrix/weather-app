@@ -46,7 +46,7 @@ class App {
   async _getWeatherData(lat, lng) {
     this._renderSpiner()
     try {
-      const data = await this._getJson(`http://api.weatherapi.com/v1/current.json?key=${this.#weatherapiKey}&q=${lat},${lng}`)
+      const data = await this._getJson(`https://api.weatherapi.com/v1/current.json?key=${this.#weatherapiKey}&q=${lat},${lng}`)
       if(!data) throw Error(`Error loading page! try again`)
       const { current, location } = data
       // console.log(data)
